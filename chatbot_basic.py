@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 from chatterbot import ChatBot
-import pyttsx
+import pyttsx3
 
 #intializing speach module
-voice = pyttsx.init()
+voice = pyttsx3.init()
 
 
 # Create a new instance of a ChatBot
@@ -20,8 +20,8 @@ bot = ChatBot(
     #       'default_response': 'I am sorry, but I do not understand.'
     #    }
     #],
-    #trainer='chatterbot.trainers.ListTrainer',
-    trainer='chatterbot.trainers.ChatterBotCorpusTrainer',
+    trainer='chatterbot.trainers.ListTrainer',
+    #trainer='chatterbot.trainers.ChatterBotCorpusTrainer',
     silence_performance_warning=True
 )
 
@@ -34,12 +34,12 @@ bot = ChatBot(
 #    'nothing much just roaming'])
 
 # Train the chat bot with a few responses
-bot.train([
+'''bot.train([
     'who are you',
     'I am Elisa',
     'I am Elisa',
     'no you are not',
-    'yes I am, what can you do about that'])
+    'yes I am, what can you do about that'])'''
 
 # Train the chat bot with a few responses
 # bot.train([
@@ -49,8 +49,7 @@ bot.train([
 #    'what are up to lately',
 #    'nothing much just roaming'])
 
-bot.train("chatterbot.corpus.english.greetings",
-    "chatterbot.corpus.english.conversations")
+#bot.train("chatterbot.corpus.english.greetings","chatterbot.corpus.english.conversations")
 
 
 
